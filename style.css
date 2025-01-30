@@ -222,14 +222,14 @@ button,
     transition: 0.5s;
 }
 
-.btn-transform {
+#fixed {
     width: fit-content;
     padding: 0.5rem;
     position: fixed;
     left: 1rem;
     bottom: 1rem;
     transition: 0.5s;
-    opacity: 0.7;
+    opacity: 0;
 }
 
 @keyframes fadeIn {

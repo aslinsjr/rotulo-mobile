@@ -1,45 +1,3 @@
-// // Contador animado
-// function animateCounter(id, start, end, duration) {
-//     let obj = document.getElementById(id);
-//     let range = end - start;
-//     let increment = range / (duration / 10);
-//     let current = start;
-
-//     let timer = setInterval(() => {
-//         current += increment;
-//         obj.textContent = Math.floor(current);
-//         if (current >= end) {
-//             obj.textContent = end;
-//             clearInterval(timer);
-//         }
-//     }, 15);
-// }
-
-// // Iniciar contadores quando a seção estiver visível
-// document.addEventListener("DOMContentLoaded", () => {
-//     let impactoSection = document.querySelector("#sobre");
-
-//     let observer = new IntersectionObserver(entries => {
-//         if (entries[0].isIntersecting) {
-//             animateCounter("clientes", 0, 2000, 1000);
-//             animateCounter("pecas", 0, 500000, 1000);
-//             observer.disconnect();
-//         }
-//     });
-
-//     observer.observe(impactoSection);
-// });
-
-// // Depoimentos Slider
-// let slideIndex = 0;
-// function slideDepoimentos() {
-//     let slides = document.querySelectorAll(".slide");
-//     slideIndex++;
-//     if (slideIndex >= slides.length) slideIndex = 0;
-//     document.querySelector(".slider").style.transform = translateX(`${-slideIndex * 100}%`);
-// }
-
-// setInterval(slideDepoimentos, 4000);
 
 
 window.addEventListener("scroll", () => {
@@ -49,12 +7,20 @@ window.addEventListener("scroll", () => {
 
     let height = screen.height
 
-    if (document.querySelector("#sobre-video").getBoundingClientRect().top < height - height*0.2 && document.querySelector("#sobre-video").getBoundingClientRect().top > -(height * 2.8)) {
-        document.querySelector("#btn-action").innerHTML = ""
-        document.querySelector(".cta").classList.add("btn-transform")
-    } else {
-        document.querySelector("#btn-action").innerHTML = "Quero meu <br> orçamento agora"
-        document.querySelector(".cta").classList.remove("btn-transform")
+    if (document.querySelector("#top").getBoundingClientRect().top < 0) {
+        document.querySelector("#top").style.opacity = "0"
+        document.querySelector("#fixed").style.opacity = "0.7"
+
+    } else if (document.querySelector("#fixed").getBoundingClientRect().top > 0) {
+        document.querySelector("#top").style.opacity = "1"
+        document.querySelector("#fixed").style.opacity = "0"
+
+    } 
+
+    console.log(document.querySelector("#bottom").getBoundingClientRect().top)
+
+    if (document.querySelector("#bottom").getBoundingClientRect().top < height + height*0.3) {
+        document.querySelector("#fixed").style.opacity = "0"
     }
 
 
