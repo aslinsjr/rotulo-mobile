@@ -49,7 +49,7 @@ window.addEventListener("scroll", () => {
 
     let height = screen.height
 
-    if (window.scrollY > height - 100) {
+    if (window.scrollY > height - height*0.2) {
         document.querySelector("#btn-action").innerHTML = ""
         document.querySelector(".cta-btn").classList.add("btn-transform")
     } else {
@@ -58,7 +58,7 @@ window.addEventListener("scroll", () => {
     }
 
 
-    if (window.scrollY > height * 2 + 100) {
+    if (window.scrollY > height && window.scrollY < height*2 - height*0.3) {
 
         document.querySelector("#sobre-video").play()
 
