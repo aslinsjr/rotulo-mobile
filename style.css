@@ -17,6 +17,23 @@ section {
     padding: 1rem;
 }
 
+button {
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    gap: 1rem;
+    font-size: 0.9rem;
+    border: 2px solid #ff4141;
+    color: white;
+    background-color: #0f0f0f ;
+}
+
 /* Cabeçalho */
 .header {
     position: fixed;
@@ -84,30 +101,15 @@ section {
 }
 
 .cta-btn {
-    background-color: #0f0f0f ;
-    color: white;
     width: 95%;
     padding: 0.5rem 0;
-    border: none;
-    transition: 0.3s;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.2rem;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-    border: 2px solid #ff4141;
 }
 
 .cta-btn:hover {
     background: #cc3434;
 }
 
-.sobre {
+.text-and-video {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,16 +118,16 @@ section {
     margin: 5vh 0;
 }
 
-.sobre h2 {
+.text-and-video h2 {
     font-size: 1.5rem;
     text-transform: uppercase;
 }
 
-.sobre h2 span {
+.text-and-video h2 span {
     color: #ff4141;
 }
 
-.sobre video {
+.text-and-video video {
     width: 100%;
     border-radius: 1rem;
 }
@@ -140,13 +142,74 @@ section {
     margin-right:0.5rem;
 }
 
+#cliente-depo {
+    color: #fff;
+}
+
 #number p {
     margin-top: -0.7rem;
     margin-bottom: 1.5rem;
 }
 
+#social h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#social h2 span {
+    color: #cc3434;
+}
+
 #social img {
     width:  100%;
+}
+
+#clientes h2 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+#clientes h2 span {
+    color: #cc3434;
+}
+
+#clientes-img {
+    width: 95%;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+#depoimentos {
+    margin: 0;
+    margin-top: -5vh;
+}
+
+#depoimentos h2 {
+    font-size: 2rem;
+}
+
+#depoimentos h2 p {
+    font-size: 1rem;
+    text-transform: none;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+#depoimentos h2 p span {
+    text-align: end;
+    display: grid;
+}
+
+#catalogo {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .fade-in {

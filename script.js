@@ -49,7 +49,7 @@ window.addEventListener("scroll", () => {
 
     let height = screen.height
 
-    if (window.scrollY > height - height*0.2) {
+    if (window.scrollY > height - height*0.2 && window.scrollY < height * 4 + height* 0.3) {
         document.querySelector("#btn-action").innerHTML = ""
         document.querySelector(".cta-btn").classList.add("btn-transform")
     } else {
@@ -64,6 +64,14 @@ window.addEventListener("scroll", () => {
 
     } else {
         document.querySelector("#sobre-video").pause()
+    }
+
+    if (window.scrollY > height && window.scrollY < height*4 - height*0.3) {
+
+        document.querySelector("#depoimentos-video").play()
+
+    } else {
+        document.querySelector("#depoimentos-video").pause()
     }
 
 
@@ -86,6 +94,8 @@ setInterval(() => {
 
 }, 6000)
 
-document.querySelector(".cta-btn").addEventListener("click", () => {
-    window.location.href = "https://api.whatsapp.com/send?phone=5581989867375&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20an%C3%BAncio%20do%20seu%20site%20e%20gostaria%20de%20solicitar%C2%A0um%C2%A0or%C3%A7amento."
-})
+document.querySelectorAll(".cta-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        window.location.href = "https://api.whatsapp.com/send?phone=5581989867375&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20an%C3%BAncio%20do%20seu%20site%20e%20gostaria%20de%20solicitar%C2%A0um%C2%A0or%C3%A7amento."
+    })
+});
