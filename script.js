@@ -43,9 +43,12 @@
 
 window.addEventListener("scroll", () => {
 
+    console.log(screen.height)
     console.log(window.scrollY)
 
-    if (window.scrollY > 500) {
+    let height = screen.height
+
+    if (window.scrollY > height - 100) {
         document.querySelector("#btn-action").innerHTML = ""
         document.querySelector(".cta-btn").classList.add("btn-transform")
     } else {
@@ -53,7 +56,7 @@ window.addEventListener("scroll", () => {
         document.querySelector(".cta-btn").classList.remove("btn-transform")
     }
 
-    if (window.scrollY > 1500) {
+    if (window.scrollY > height*2 + 100) {
         document.querySelector("#sobre-video").play()
     } else {
         document.querySelector("#sobre-video").pause()
