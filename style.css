@@ -17,7 +17,8 @@ section {
     padding: 1rem;
 }
 
-button {
+button, 
+#catalogo a {
     transition: 0.3s;
     cursor: pointer;
     display: flex;
@@ -31,7 +32,8 @@ button {
     font-size: 0.9rem;
     border: 2px solid #ff4141;
     color: white;
-    background-color: #0f0f0f ;
+    background-color: #0f0f0f;
+    text-decoration: none;
 }
 
 /* Cabeçalho */
@@ -100,14 +102,12 @@ button {
     display: none;
 }
 
-.cta-btn {
+.btn {
     width: 95%;
     padding: 0.5rem 0;
+    z-index: 3;
 }
 
-.cta-btn:hover {
-    background: #cc3434;
-}
 
 .text-and-video {
     display: flex;
@@ -152,7 +152,7 @@ button {
 }
 
 #social h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: uppercase;
 }
 

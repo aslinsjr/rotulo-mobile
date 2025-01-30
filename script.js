@@ -49,12 +49,12 @@ window.addEventListener("scroll", () => {
 
     let height = screen.height
 
-    if (document.querySelector("#sobre-video").getBoundingClientRect().top < height && document.querySelector("#sobre-video").getBoundingClientRect().top > -(height * 2.8)) {
+    if (document.querySelector("#sobre-video").getBoundingClientRect().top < height - height*0.2 && document.querySelector("#sobre-video").getBoundingClientRect().top > -(height * 2.8)) {
         document.querySelector("#btn-action").innerHTML = ""
-        document.querySelector(".cta-btn").classList.add("btn-transform")
+        document.querySelector(".cta").classList.add("btn-transform")
     } else {
         document.querySelector("#btn-action").innerHTML = "Quero meu <br> orçamento agora"
-        document.querySelector(".cta-btn").classList.remove("btn-transform")
+        document.querySelector(".cta").classList.remove("btn-transform")
     }
 
 
@@ -93,7 +93,7 @@ setInterval(() => {
 
 }, 6000)
 
-document.querySelectorAll(".cta-btn").forEach((btn) => {
+document.querySelectorAll(".cta").forEach((btn) => {
     btn.addEventListener("click", () => {
         window.location.href = "https://api.whatsapp.com/send?phone=5581989867375&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20an%C3%BAncio%20do%20seu%20site%20e%20gostaria%20de%20solicitar%C2%A0um%C2%A0or%C3%A7amento."
     })
