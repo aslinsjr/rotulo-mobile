@@ -55,6 +55,8 @@ window.addEventListener("scroll", () => {
 
     if (window.scrollY > 1500) {
         document.querySelector("#sobre-video").play()
+    } else {
+        document.querySelector("#sobre-video").pause()
     }
 
 
