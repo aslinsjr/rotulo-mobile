@@ -84,7 +84,7 @@ section {
 }
 
 .cta-btn {
-    background: transparent;
+    background-color: #0f0f0f ;
     color: white;
     width: 95%;
     padding: 0.5rem 0;
@@ -126,6 +126,14 @@ section {
     width: 90%;
 }
 
+#social img {
+    width:  100%;
+}
+
+#video video {
+    width: 100%;
+}
+
 .fade-in {
     animation: fadeIn 1s;
     transition: 0.5s;
@@ -143,6 +151,7 @@ section {
     left: 1rem;
     bottom: 1rem;
     transition: 0.5s;
+    opacity: 0.7;
 }
 
 @keyframes fadeIn {

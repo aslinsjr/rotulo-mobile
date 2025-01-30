@@ -53,6 +53,10 @@ window.addEventListener("scroll", () => {
         document.querySelector(".cta-btn").classList.remove("btn-transform")
     }
 
+    if (window.scrollY > 1500) {
+        document.querySelector("#sobre-video").play()
+    }
+
 
 })
 
