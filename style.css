@@ -109,8 +109,11 @@ section {
 
 .sobre {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 3vh;
+    margin: 5vh 0;
 }
 
 .sobre h2 {
@@ -122,21 +125,28 @@ section {
     color: #ff4141;
 }
 
-.sobre img {
-    width: 90%;
+.sobre video {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.text-box h2 {
+    font-size: 3rem;
+    line-height: 95%;
+}
+
+.text-box span {
+    font-size: 1rem;
+    margin-right:0.5rem;
+}
+
+#number p {
+    margin-top: -0.7rem;
+    margin-bottom: 1.5rem;
 }
 
 #social img {
     width:  100%;
-}
-
-#video {
-    margin: -150px 0;
-}
-
-#video video {
-    width: 100%;
-    border-radius: 1rem;
 }
 
 .fade-in {
