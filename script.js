@@ -49,7 +49,7 @@ window.addEventListener("scroll", () => {
 
     let height = screen.height
 
-    if (window.scrollY > height - height*0.2 && window.scrollY < height * 4 + height* 0.3) {
+    if (document.querySelector("#sobre-video").getBoundingClientRect().top < height && document.querySelector("#sobre-video").getBoundingClientRect().top > -(height * 2.8)) {
         document.querySelector("#btn-action").innerHTML = ""
         document.querySelector(".cta-btn").classList.add("btn-transform")
     } else {
@@ -58,7 +58,7 @@ window.addEventListener("scroll", () => {
     }
 
 
-    if (window.scrollY > height && window.scrollY < height*2 - height*0.3) {
+    if (document.querySelector("#sobre-video").getBoundingClientRect().top < height && document.querySelector("#sobre-video").getBoundingClientRect().top > 0) {
 
         document.querySelector("#sobre-video").play()
 
@@ -66,14 +66,13 @@ window.addEventListener("scroll", () => {
         document.querySelector("#sobre-video").pause()
     }
 
-    if (window.scrollY > height && window.scrollY < height*4 - height*0.3) {
+    if (document.querySelector("#depoimentos-video").getBoundingClientRect().top < height && document.querySelector("#depoimentos-video").getBoundingClientRect().top > 0) {
 
         document.querySelector("#depoimentos-video").play()
 
     } else {
         document.querySelector("#depoimentos-video").pause()
     }
-
 
 })
 
