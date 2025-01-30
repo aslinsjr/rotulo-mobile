@@ -41,13 +41,6 @@
 
 // setInterval(slideDepoimentos, 4000);
 
-let clicked
-
-window.addEventListener("click", () => {
-    clicked = true
-    
-    return clicked
-})
 
 window.addEventListener("scroll", () => {
 
@@ -64,12 +57,11 @@ window.addEventListener("scroll", () => {
         document.querySelector(".cta-btn").classList.remove("btn-transform")
     }
 
-   
 
-    if (window.scrollY > height*2 + 100 && clicked) {
+    if (window.scrollY > height * 2 + 100) {
 
         document.querySelector("#sobre-video").play()
-        
+
     } else {
         document.querySelector("#sobre-video").pause()
     }

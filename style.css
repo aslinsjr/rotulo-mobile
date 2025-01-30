@@ -132,6 +132,7 @@ section {
 
 #video video {
     width: 100%;
+    border-radius: 1rem;
 }
 
 .fade-in {
@@ -171,5 +172,12 @@ section {
 
     to {
         opacity: 0;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #social img {
+        height: 100%;
+        width: auto;
     }
 }
