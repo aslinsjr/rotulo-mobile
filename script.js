@@ -81,3 +81,7 @@ setInterval(() => {
 
 
 }, 6000)
+
+document.querySelector(".cta-btn").addEventListener("click", () => {
+    window.location.href = "https://api.whatsapp.com/send?phone=5581989867375&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20an%C3%BAncio%20do%20seu%20site%20e%20gostaria%20de%20solicitar%C2%A0um%C2%A0or%C3%A7amento."
+})
