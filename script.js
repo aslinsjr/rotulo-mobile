@@ -1,8 +1,7 @@
 
-
 window.addEventListener("scroll", () => {
 
-    console.log(screen.height)
+    console.log(screen.width)
     console.log(window.scrollY)
 
     let height = screen.height
@@ -15,11 +14,9 @@ window.addEventListener("scroll", () => {
         document.querySelector("#top").style.opacity = "1"
         document.querySelector("#fixed").style.opacity = "0"
 
-    } 
+    }
 
-    console.log(document.querySelector("#bottom").getBoundingClientRect().top)
-
-    if (document.querySelector("#bottom").getBoundingClientRect().top < height + height*0.3) {
+    if (document.querySelector("#bottom").getBoundingClientRect().top < height + height * 0.3) {
         document.querySelector("#fixed").style.opacity = "0"
     }
 
@@ -28,8 +25,19 @@ window.addEventListener("scroll", () => {
 
         document.querySelector("#sobre-video").play()
 
+        if (screen.width > 500) {
+            document.querySelector("#sobre-video").style.display = "flex"
+
+            document.querySelector("#close-btn").addEventListener("click", () => {
+                document.querySelector("#sobre-video").pause()
+                document.querySelector("#sobre-video").style.display = "none"
+                document.querySelector("#close-btn").style.display = "none"
+            })
+        }
+
     } else {
         document.querySelector("#sobre-video").pause()
+
     }
 
     if (document.querySelector("#depoimentos-video").getBoundingClientRect().top < height && document.querySelector("#depoimentos-video").getBoundingClientRect().top > 0) {
